@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="HostCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="HostWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="HostWorker.ConnectionString"
+               value="Endpoint=sb://carnbus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=SLblu/gBByZHDFwssItk9lGg5FixAzXc9wk1SmCU/68=" />
+      <Setting name="HostWorker.AutoUpdate"
+               value="true" />
+      <Setting name="HostWorker.UpdateInterval"
+               value="5000" />
+      <Setting name="HostWorker.Container"
+               value="endpoints" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString"
+               value="DefaultEndpointsProtocol=https;AccountName=carnbusstorage;AccountKey=XGoQFAa/nGH7/lCC2NuEL2X4OLZWzCDS4+h8iAb0AFKmk+g3zXfkdHT/1lV0nWLVHbQkVfeZGl6mWTMKm9LMQg==;EndpointSuffix=core.windows.net" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
